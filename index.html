@@ -43,12 +43,25 @@
     gtag('js', new Date());
 
     gtag('config', 'G-KGFP1CX5NT');
+    // 쿠폰 코드 클릭 시 복사 함수
+    function copyCouponCode() {
+      const couponCode = document.getElementById("coupon").textContent;
+      navigator.clipboard.writeText(couponCode).then(() => {
+        alert("쿠폰 코드가 복사되었습니다: " + couponCode);
+      }).catch(err => {
+        console.error("복사 실패: ", err);
+      });
+    }
   </script>
 </head>
 <body>
   <h1>10% 할인 쿠폰</h1>
   <p>| 코드 |</p>
-  <div class="coupon-code" id="coupon">로딩 중...</div>
+  <div class="coupon-code" id="coupon" onclick="copyCouponCode()">로딩 중...</div> <!-- 클릭 시 복사 함수 호출 -->
+  <p>쿠폰 클릭 시 복사됩니다.</p>
+  
+  <p>| 쿠폰 사용 방법 |</p>
+  <p>마이페이지 → 쿠폰 → 쿠폰등록 클릭 후 번호 입력</p>
 
   <p>| 유의사항 |</p>
   <div class="danger" id="info">해당 쿠폰은 똑똑꾸러밍 자사몰에서만 이용 가능합니다</div>
