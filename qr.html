@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coupon Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .coupon-code {
+      font-size: 2rem;
+      color: #ff5722;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>축하합니다! 할인 쿠폰을 받으셨습니다 🎉</h1>
+  <p>코드:</p>
+  <div class="coupon-code" id="coupon">로딩 중...</div>
+
+  <script>
+    // 쿠폰 코드를 서버에서 받아오거나 랜덤으로 생성
+    const couponCode = "APT20000"; // 예시 코드
+    document.getElementById("coupon").textContent = couponCode;
+  </script>
+</body>
+</html>
