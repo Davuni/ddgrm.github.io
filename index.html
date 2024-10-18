@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coupon Landing Page</title>
+  <title>똑똑꾸러밍 쿠폰</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,17 +15,37 @@
       color: #ff5722;
       margin-top: 20px;
     }
+    img {
+      margin-top: 20px; /* 이미지 위에 간격 추가*/
+      max-width: 200px; /* 이미지의 크기를 조정 */
+      height: auto;
+      margin-bottom: 20px; /* 이미지 아래에 간격 추가 */
+    }
   </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGFP1CX5NT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KGFP1CX5NT');
+  </script>
 </head>
 <body>
-  <h1>축하합니다! 할인 쿠폰을 받으셨습니다 🎉</h1>
-  <p>코드:</p>
+  <h1>10% 할인 쿠폰을 받으셨습니다</h1>
+  <p>| 코드 |</p>
   <div class="coupon-code" id="coupon">로딩 중...</div>
+  
+  <img src="https://davuni.github.io/ddgrm.github.io/images/logo.png" alt="똑똑꾸러밍 로고">
 
   <script>
     // 쿠폰 코드를 서버에서 받아오거나 랜덤으로 생성
     const couponCode = "APT20000"; // 예시 코드
     document.getElementById("coupon").textContent = couponCode;
   </script>
+
 </body>
 </html>
+
